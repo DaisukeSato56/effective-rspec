@@ -3,9 +3,7 @@
 Sandwitch = Struct.new(:taste, :toppings)
 
 RSpec.describe 'An ideal sandwitch' do
-  def sandwitch
-    @sandwitch ||= Sandwitch.new('delicious', [])
-  end
+  let(:sandwitch) { Sandwitch.new('delicious', []) }
 
   it 'is delicious' do
     expect(sandwitch.taste).to eq 'delicious'
